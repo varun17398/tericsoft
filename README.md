@@ -1,4 +1,4 @@
-# tericsoft
+# Tericsoft
 Tericsoft Assignment
 
 I have not included node_modules in this.
